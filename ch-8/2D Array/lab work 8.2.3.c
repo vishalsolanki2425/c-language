@@ -12,6 +12,9 @@ int main()
     int a[row][col];  
     int i, j;
     int sum = 0;
+    
+    if(row==col)
+	{
 
     printf("\n\n Array of Input \n\n");
 
@@ -36,16 +39,14 @@ int main()
         printf("\n");
     }
     
-	if(row==col)
-	{ 
 		for(i=0;i<row;i++)
 		{
-			sum += a[i][j];
+			sum = sum + a[i][j];
 		}
         printf("\nSum of all elements: %d\n", sum);
 	}
     else
 	{
-		printf(" ");
+		printf("\n Enter The Same Number in Row & Colmn");
 	}
 }

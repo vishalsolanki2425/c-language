@@ -10,8 +10,7 @@ main()
     scanf("%d", &col);
 
     int a[row][col];  
-    int i, j;
-    int sum = 0;
+    int i,j,largest=0;
 
     printf("\n\n Array of Input \n\n");
 
@@ -25,30 +24,18 @@ main()
         printf("\n");
     }
 
-    printf("\n\n Array of Output \n\n");
+    printf("\n Output of The largest Number");
 
     for (i = 0; i < row; i++) 
 	{
         for (j = 0; j < col; j++) 
 		{
-            printf("%d ", a[i][j]);
+			if (a[i][j]>largest) 
+			{
+                largest=a[i][j];
+            }						
         }
         printf("\n");
-    }
-        printf("\n\n Array of Output \n\n");
-    for (i = 0; i < row; i++) 
-	{
-        for (j = 0; j < col; j++) 
-		{  
-            if (i==0 || j==0 || i==row-1 || j==row-1) 
-			{
-                printf("%d ", a[i][j]);          
-            } 
-			else 
-			{
-                printf("  ");
-            }
-        }
-        printf("\n");
-    }
+    }  
+    printf("The Largest Value Of in Array : %d",largest);
 }
