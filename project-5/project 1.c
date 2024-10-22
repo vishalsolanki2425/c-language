@@ -17,7 +17,7 @@ main()
         scanf("%d", &a[i]);
     }
 
-    printf("\n Negative Value output :\n");
+    printf("\n Negative Value output\n");
     
 	printf(" Negative Value : ", a[i]);
     for(i=0;i<n;i++)

@@ -35,41 +35,37 @@ main()
         printf("\n");
     }
 
+	int r,sum=0;
+	
 	printf("\nEnter The Row: ");
-    scanf("%d", &row);
+    scanf("%d", &r);
 
     for (i = 0; i < row; i++)
 	{
         for (j = 0; j < col; j++)
 		{
-            if (i==0 && i<=row)
+            if (r==i)
 			{
-                printf("%d ", i);
-            }
-			else
-			{
-                printf(" ");
+                printf("%d ",a[i][j]);
+                sum += a[i][j];
             }
         }
-        printf("\n");
     }
-
-	printf("Enter The Col: ");
-    scanf("%d", &col);
-
-	for (i = 0; i < row; i++)
+	printf("\nThe Sum of Row : %d",sum);
+	
+	printf("\n\nEnter The Colmn: ");
+    scanf("%d", &r);
+	sum=0;
+    for (i = 0; i < row; i++)
 	{
         for (j = 0; j < col; j++)
 		{
-            if (j==0 && j<=col)
+            if (r==j)
 			{
-                printf("%d ", j);
-            }
-			else
-			{
-                printf(" ");
+                printf("%d ",a[i][j]);
+                sum += a[i][j];
             }
         }
-        printf("\n");
     }
+	printf("\nThe Sum of Colmn : %d",sum);
 }
