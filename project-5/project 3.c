@@ -9,7 +9,7 @@ main()
     printf("Enter The Col: ");
     scanf("%d", &col);
 
-    int a[row][col];  
+    int a[row][col];
     int i,j;
 
     printf("\n\n Array of Input \n\n");
