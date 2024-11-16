@@ -19,5 +19,5 @@ main()
 		   name[i] += 32;
 		}
     }
-    printf("name\t : %s",name);		
+    printf("name\t : %s",name);
 }

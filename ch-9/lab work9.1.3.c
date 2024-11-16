@@ -20,7 +20,7 @@ main()
 		}
 		else if(name[i]>=97 && name[i]<=122)
 		{
-           name[i] -= 32;			
+           name[i] -= 32;
 		}
     }
     printf("name\t : %s",name);		
