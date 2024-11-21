@@ -1,24 +1,26 @@
 #include <stdio.h>
+#include <string.h>
 
-main()
+void main()
 {
-    char string1[100];
-    int freq[256] = {0}; 
+    char string[100];
     
     printf("Enter the string: ");
-    scanf("%s", string1);
+    scanf("%s",&string);
     
-    for (int i = 0; string1[i] != '\0'; i++)
+    for (int i = 0; i<strlen(string); i++)
     {
-        freq[string1[i]]++;
-    }
-
-    printf("Character frequencies in the string:\n");
-    for (int i = 0; i < 256; i++)
-    {
-        if (freq[i] > 0) 
+    	int feq = 1;
+    	
+        for(int j=i+1; j<strlen(string); j++)
         {
-            printf("%c: %d\n", i, freq[i]);
-        }
+        	if(string[i]==string[j])
+        	{
+        		feq++;
+        		string[j]='\0';
+			}
+		}
+		if(string[i]!='\0')
+			printf("%c => %d\n",string[i], feq);
     }
 }

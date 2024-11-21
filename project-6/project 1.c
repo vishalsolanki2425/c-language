@@ -3,7 +3,7 @@
 main() 
 {
     char str[100], rev[100];
-    int length = 0, isPalindrome = 1;
+    int length = 0, Palindrome = 1;
 
     printf("Enter a string: ");
     scanf("%s", str);
@@ -25,12 +25,12 @@ main()
 	{
         if (str[i] != rev[i]) 
 		{
-            isPalindrome = 0;
+            Palindrome = 0;
             break;
         }
     }
 
-    if(isPalindrome)
+    if(Palindrome)
 	{
         printf("The string is a palindrome\n");
     } 
