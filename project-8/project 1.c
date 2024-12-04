@@ -1,35 +1,24 @@
 #include <stdio.h>
-#include <string.h> 
+#include <string.h>
 
-int Length(const char *str) 
+void main()
 {
-    const char *ptr = str; 
-    int length = 0;
-
-    while (*ptr != '\0') 
-    {
-        length++;
-        ptr++;
-    }
-    return length;
-}
-
-int main()
-{
-    char string[100];
-
-    printf("Enter a string: ");
-    fgets(string, sizeof(string), stdin);
-
-    char *line = strchr(string, '\n');
-    if (line) 
-    {
-        *line = '\0';
-    }
-
-    int length = Length(string);
-    
-    printf("The length of the string is: %d\n", length);
-
-    return 0;
+	char str[20];
+	
+	printf("Enter any string : ");
+	gets(str);
+	
+	int len = 0;
+	
+	int *ptr;
+	
+	ptr = &len;
+	
+	
+	for(int i=0; str[i]!='\0'; i++)
+	{
+		(*ptr)++;
+	}
+	
+	printf("String Length : %d",*ptr);
 }
